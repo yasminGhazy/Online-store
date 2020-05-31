@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+*{
+  box-sizing: border-box;
+}
+div{
+  display: block;
+}
+li{
+  list-style: none;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
