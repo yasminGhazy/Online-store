@@ -63,5 +63,14 @@ export const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
 },
+table: {
+  minWidth: 650,
+ 
+},
+container :{
+  margin_right :'50px',
+  margin_left :'50px',
+
+}
 }));
 

@@ -1,5 +1,4 @@
 import cache from './../cache';
-import { http } from '../endpoints';
 
 class User {
     constructor() {

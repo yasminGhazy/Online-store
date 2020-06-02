@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Is from '@flk/supportive-is';
-import { http } from './../endpoints'
+import http from './../endpoints'
 import user from './../component/User';
 
 
 export default class Login extends Component {
- 
+
   state = {
     validation: {
       email: null,
@@ -49,28 +49,28 @@ export default class Login extends Component {
   };
 
   submit = async (e) => {
- 
+
     e.preventDefault();// to prevent loading
 
     try {
-      console.log(e.target)
-      let  {data}  = await http.post('/login',e.target);
+      //console.log(e.target)
+      let { data } = await http.post('/login', e.target);
       this.setState({
-            validation: {
-              valid: "valid data ....!"
-            }
-          });
+        validation: {
+          valid: "valid data ....!"
+        }
+      });
 
-          user.login(data.user)
-          this.props.history.push('/');
+      user.login(data.user)
+      this.props.history.push('/users');
 
     } catch (error) {
       let errors = error.response.data.errors;
       this.setState({
-              validation: {
-                valid: "please type valid data ....!"
-              }
-            })
+        validation: {
+          valid: errors
+        }
+      })
     }
   };
 

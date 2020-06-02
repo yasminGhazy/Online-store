@@ -3,24 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "link-module-alias": "^1.2.0",
     "@flk/supportive-is": "^1.3.0",
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
     "@material/drawer": "^6.0.0",
     "@nuxtjs/axios": "^5.10.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "link-module-alias": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "reinforcements": "^1.1.6"
   },
   "_moduleAliases": {
     "user": "src/component/User.js",
-    "component":"src/component",
-    "shared":"src/shared"
+    "component": "src/component",
+    "shared": "src/shared"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,5 +45,3 @@
     ]
   }
 }
-
-
