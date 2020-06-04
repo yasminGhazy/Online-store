@@ -3,6 +3,8 @@ import Layout from './../component/Layout';
 import Table from './Table';
 import Http from './../endpoints';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import Theme from '../shared/Theme';
+import { TableEditBtn, TableDeleteBtn } from '../shared/Table-actions';
 
 export default class User extends Component {
     constructor(props) {
@@ -35,7 +37,7 @@ export default class User extends Component {
             },
             {
                 heading: 'actions',
-                key: [],
+                buttons: [TableEditBtn,TableDeleteBtn],
             },
         ],
     };
@@ -60,12 +62,12 @@ export default class User extends Component {
 
     render() {
         return (
-            <div>
+            <Theme>
                 <Layout />
 
                 {this.state.isLoading ? <LinearProgress /> : <Table options={this.table} records={this.state.renderRecords}/>}
 
-            </div>
+            </Theme>
         );
     }
 }
